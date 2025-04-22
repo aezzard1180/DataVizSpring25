@@ -83,17 +83,31 @@ var ctx = document.getElementById('myChart').getContext('2d');
             ]
           },
           options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Japan has the highest life expectancy',
+                font: {
+                  size: 18
+                }
+              },
+              subtitle: {
+                display: true,
+                text: 'Out of the top 10 life expectancies, Japan has the highest per GDP',
+              }
+            },
             scales: {
               y: {
                 title: {
                   display: true,
-                  text: 'Y axis title'
+                  text: 'GDP Per Capita'
                 }
               },
               x: {
                   title: {
                       display: true,
-                      text: 'X axis title'
+                      text: 'Life Expectancy'
                   }
               }
             }
